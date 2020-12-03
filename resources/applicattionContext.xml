@@ -10,12 +10,17 @@
         <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="musicBean1"
-          class="ru.kolikov.springcourse.ClassicalMusic" >
+          class="ru.kolikov.springcourse.ClassicalMusic"
+          scope="prototype"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy">
+
 
     </bean>
 
     <bean id="musicBean2"
-          class="ru.kolikov.springcourse.RockMusic" >
+          class="ru.kolikov.springcourse.RockMusic"
+         >
 
     </bean>
     <bean id="musicPlayer"
