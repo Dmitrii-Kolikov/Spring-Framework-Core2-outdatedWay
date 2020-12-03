@@ -20,6 +20,8 @@ public class TestSpring {
         System.out.println(firstClassicalMusic.getVolume());  // 50
         System.out.println(secondClassicalMusic.getName());   // Dmitrii
         System.out.println(secondClassicalMusic.getVolume());  // 20
+        //Scope prototype вызывает метод init два раза, при получение двух бинов.
+        //Scope prototype вызывает метод destroy не одного раза в этом и есть особенность-Scope Prototype.
 
 
         //Scope-singleton (по умолчанию)
@@ -33,7 +35,7 @@ public class TestSpring {
         System.out.println(firstRockMusic.getVolume()); //30
         System.out.println(secondRockMusic.getName()); //Aleksey
         System.out.println(secondRockMusic.getVolume()); //30
-
+        
 
 
         context.close();
